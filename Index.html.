@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mi Malla de Psicología</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fefefe; padding: 20px; }
+    h1 { color: #8a2be2; }
+    ul { list-style: none; padding: 0; }
+    li {
+      background: #f0f0f0;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    li.aprobado {
+      text-decoration: line-through;
+      background: #c2f0c2;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mi Malla de Psicología</h1>
+  <p>Haz clic en los cursos que ya llevaste para marcarlos.</p>
+
+  <ul id="malla">
+    <li>Psicología General</li>
+    <li>Biología</li>
+    <li>Estadística</li>
+    <li>Psicología del Desarrollo</li>
+    <li>Neurociencia</li>
+    <li>Psicopatología</li>
+    <li>Evaluación Psicológica</li>
+    <li>Psicoterapia Cognitivo-Conductual</li>
+    <li>Mindfulness Clínico</li>
+    <!-- Agrega más cursos aquí -->
+  </ul>
+
+  <script>
+    document.querySelectorAll('#malla li').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('aprobado');
+      });
+    });
+  </script>
+</body>
+</html>
